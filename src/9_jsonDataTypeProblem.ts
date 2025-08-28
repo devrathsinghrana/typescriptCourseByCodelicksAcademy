@@ -5,9 +5,10 @@ type OrderDetails = {
 };
 
 // as we can see here price is coming as string from backend but our type is number
-// so we need to convert it into number
+// so we need to convert it into number manually after parsing to avoid runtime errors 
 // i.e. there is no type safety with JSON.parse as it will always accept string and return any type
 // so we need to validate it manually or use some library like zod, yup etc for validation on run time. There is no specific compile time solution for this problem
+// json.parse have no generics to set types of it's return value
 const orderDetails: OrderDetails = JSON.parse(
   `{"orderId": "ORD342E", "price": "23", "quantity": 2}`
 );
