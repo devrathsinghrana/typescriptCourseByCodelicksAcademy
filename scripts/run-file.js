@@ -9,9 +9,9 @@ const filename = process.argv[2];
 
 if (!filename) {
     console.error('❌ Error: Please provide a filename');
-    console.log('📝 Usage: npm run start:file <filename>');
-    console.log('📝 Example: npm run start:file 1_primitiveTypes');
-    console.log('📝 Example: npm run start:file 2_instanceTypes');
+    console.log('📝 Usage: npm start <filename>');
+    console.log('📝 Example: npm start 1_primitiveTypes');
+    console.log('📝 Example: npm start 2_instanceTypes');
     process.exit(1);
 }
 
