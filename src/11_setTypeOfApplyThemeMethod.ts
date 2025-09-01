@@ -1,3 +1,4 @@
+// helper method to apply theme based on type
 function applyTheme(theme: "light" | "dark"): void {
   // Some implementation ...
 }

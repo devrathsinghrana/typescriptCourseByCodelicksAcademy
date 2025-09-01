@@ -1,3 +1,4 @@
+// helper method to fetch and resolve data from server API
 async function fetchServerData(): Promise<number> {
   const res = await fetch("https://api.example.com/v");
   const data = await res.json();

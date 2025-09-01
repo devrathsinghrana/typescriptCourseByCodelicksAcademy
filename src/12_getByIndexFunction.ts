@@ -1,3 +1,4 @@
+// helper method to get value by index (0 or OTHERS)
 function getByIndex<T, U>(index: number, value1: T, value2: U): T | U {
   return index === 0 ? value1 : value2;
 }
