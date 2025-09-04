@@ -1,5 +1,5 @@
 // This helper function should is supposed to signals that an unexpected case has occurred.
-export function assertUnreachable(value: ApiResponse | number): string {
+export function assertUnreachable(value: never): never {
   throw new Error(`Unhandled case: ${JSON.stringify(value)}`);
 }
 
