@@ -1,0 +1,8 @@
+{
+  "github.copilot.enable": false,//disable github copilot autocomplete
+  "github.copilot.editor.enableAutoCompletions": false,
+  "github.copilot.advanced": {},
+  "github.copilot.chat.enabled": false,
+  "editor.inlineSuggest.enabled": false,
+  "editor.suggest.showInlineCompletions": false
+}
