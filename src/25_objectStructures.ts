@@ -204,3 +204,34 @@ const someTypeUnionKeysOne: SomeTypeUnionKeys = "common";
 const someTypeIntersectionKeysOne: SomeTypeIntersectionKeys = "isTrue";
 
 // So in conclusion union type objects can get only union of common keys between them and intersection type object can get union of all properties in intersecting objects
+
+// Why we should prefer using interfaces over type alias when intersecting object types?
+
+// Issue with using type alias with intersection(&)
+
+type BookName = {
+  title: string;
+  isbn: number;
+};
+
+type BookAuthor = {
+  authorName: string;
+  age: number;
+  isbn: number;//try to change this type from above then see error message difference between interface and type alias intersection
+};
+
+type BookDetails = BookName & BookAuthor;
+
+/*
+
+const bookDetails: BookDetails = {
+  // isbn: 123,//Type 'number' is not assignable to type 'never'. Gives this error which is not much descriptive for any new dev onboarding the project
+  title: "Jungle Book",
+  authorName: "Kaloi",
+  age: 23,
+};
+
+*/
+
+// WHY INTERFACE IS MORE EFFECTIVE METHOD
+interface BookDetailsInterface extends BookName, BookAuthor {}//Interface 'BookDetailsInterface' cannot simultaneously extend types 'BookName' and 'BookAuthor'.Named property 'isbn' of types 'BookName' and 'BookAuthor' are not identical. THIS IS MORE DESCRIPTIVE ERROR MESSAGE
