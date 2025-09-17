@@ -12,6 +12,7 @@ type RegionValues = {
   precipitation: number;
 };
 
+// This will allow us to make records with specific number of properties each mapped to same object structure containing temperature and precipitation
 type RegionForecast = Record<Region, RegionValues>;
 
 const regionForecast: RegionForecast = {
